@@ -15,7 +15,7 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 loop = asyncio.get_event_loop()
 
-TOKEN = '6753975076:AAH-Gi3iOHqMxUOUKvQ9CFnNuVuUSAHi86s'
+TOKEN = '7827572496:AAF8oREXq2iizdJtKlx1VJD8gsslLHiQ1kU'
 MONGO_URI = 'mongodb+srv://botplays:botplays@botplays.0xflp.mongodb.net/?retryWrites=true&w=majority&appName=Botplays'
 FORWARD_CHANNEL_ID = -1002165028046
 CHANNEL_ID = -1002165028046
@@ -106,7 +106,7 @@ def is_user_admin(user_id, chat_id):
 
 def create_inline_keyboard():
     keyboard = InlineKeyboardMarkup()
-    button = InlineKeyboardButton(text="OWNER", url="https://t.me/botplays90")
+    button = InlineKeyboardButton(text="OWNER", url="https://t.me/Shriram4311")
     keyboard.add(button)
     return keyboard
 
@@ -225,7 +225,7 @@ def attack_command(message):
     try:
         user_data = users_collection.find_one({"user_id": user_id})
         if not user_data or user_data['plan'] == 0:
-            bot.send_message(chat_id, "*You are not approved to use this bot. \nPlease contact @botplays90*", parse_mode='Markdown', reply_markup=create_inline_keyboard())
+            bot.send_message(chat_id, "*You are not approved to use this bot. \nPlease contact @Shriram4311*", parse_mode='Markdown', reply_markup=create_inline_keyboard())
             return
 
         if user_data['plan'] == 1 and users_collection.count_documents({"plan": 1}) > 499:
@@ -285,7 +285,7 @@ def info_command(message):
                     f"⏳ Valid Until: {valid_until}\n"
                     f"⏰ Current Time: {current_time}*")
     else:
-        response = "*No account information found. \nPlease contact @botplays90*"
+        response = "*No account information found. \nPlease contact @Shriram4311*"
     bot.send_message(message.chat.id, response, parse_mode='Markdown', reply_markup=create_inline_keyboard())
 
 @bot.message_handler(commands=['help'])
@@ -301,7 +301,7 @@ def help_command(message):
 
 @bot.message_handler(commands=['owner'])
 def owner_command(message):
-    bot.send_message(message.chat.id, "*Owner - @botplays90*", parse_mode='Markdown', reply_markup=create_inline_keyboard())
+    bot.send_message(message.chat.id, "*Owner - @Shriram4311*", parse_mode='Markdown', reply_markup=create_inline_keyboard())
 
 @bot.message_handler(commands=['canary'])
 def canary_command(message):
@@ -313,7 +313,7 @@ def canary_command(message):
     markup = InlineKeyboardMarkup()  # Ensure you use 'InlineKeyboardMarkup' directly from 'telebot.types'
     button1 = InlineKeyboardButton(
         text="📱 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗙𝗼𝗿 𝗔𝗻𝗱𝗿𝗼𝗶𝗱 📱",
-        url="https://t.me/botplays90")
+        url="https://t.me/Shriram4311")
     button2 = InlineKeyboardButton(
         text="🍎 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗳𝗼𝗿 𝗶𝗢𝗦 🍎",
         url="https://apps.apple.com/in/app/surge-5/id1442620678")
