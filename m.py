@@ -17,9 +17,9 @@ loop = asyncio.get_event_loop()
 
 TOKEN = '7827572496:AAF8oREXq2iizdJtKlx1VJD8gsslLHiQ1kU'
 MONGO_URI = 'mongodb+srv://botplays:botplays@botplays.0xflp.mongodb.net/?retryWrites=true&w=majority&appName=Botplays'
-FORWARD_CHANNEL_ID = -1002165028046
-CHANNEL_ID = -1002165028046
-error_channel_id = -1002165028046
+FORWARD_CHANNEL_ID = -1002371337064
+CHANNEL_ID = -1002371337064
+error_channel_id = -1002371337064
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
